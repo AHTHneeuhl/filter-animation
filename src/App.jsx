@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import MovieCard from "./MovieCard";
 import Filter from "./Filter";
 import "./App.css";
@@ -35,9 +35,11 @@ function App() {
         setActiveGenre={setActiveGenre}
       />
       <motion.div layout className="popular-movies">
-        {filtered.map(({ id, title, poster_path }) => (
-          <MovieCard key={id} title={title} posterPath={poster_path} />
-        ))}
+        <AnimatePresence>
+          {filtered.map(({ id, title, poster_path }) => (
+            <MovieCard key={id} title={title} posterPath={poster_path} />
+          ))}
+        </AnimatePresence>
       </motion.div>
     </div>
   );
