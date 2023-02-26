@@ -15,12 +15,13 @@
 
 h2 {
   font-size: 0.8rem;
+  color: #087f5b;
 }
 
 .movie-card img {
   width: 100%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   object-fit: cover;
 }
 
@@ -43,6 +44,7 @@ button.active {
 }
 
 .movie-card {
+  background-color: #fff5f5;
   box-shadow: 0 0 0.25rem 0 #aab6cf;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
 }
