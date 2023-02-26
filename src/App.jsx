@@ -36,8 +36,13 @@ function App() {
       />
       <motion.div layout className="popular-movies">
         <AnimatePresence>
-          {filtered.map(({ id, title, poster_path }) => (
-            <MovieCard key={id} title={title} posterPath={poster_path} />
+          {filtered.map(({ id, title, poster_path, vote_average }) => (
+            <MovieCard
+              key={id}
+              title={title}
+              posterPath={poster_path}
+              vote={vote_average}
+            />
           ))}
         </AnimatePresence>
       </motion.div>

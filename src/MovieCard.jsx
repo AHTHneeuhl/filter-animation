@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function MovieCard({ title, posterPath }) {
+export default function MovieCard({ title, posterPath, vote }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -9,11 +9,11 @@ export default function MovieCard({ title, posterPath }) {
       layout
       className="movie-card"
     >
-      <h2>{title}</h2>
       <img
         src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${posterPath}`}
         alt={title}
       />
+      <h2>{`${title} | ${vote}`}</h2>
     </motion.div>
   );
 }
